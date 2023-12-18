@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<section>
+  <div class="left-card">
+    <p id="Res">Your Result</p>
+    <div class="bigNum"> <span class="num">76</span>
+      <div class="smallNum">of 100</div>
+
+      </div class="Great">
+    <span class="G">Great</span>
+      <span class="YouScored">You scored higher than 65% of the people who have taken these tests.</span>
+  </div>
+ 
+  <div class="right-card">
+    <p id="Sum">Summary</p>
+
+  <div class="reaction">
+ <span></span>
+  </div>
+   
+  <div class="memory">
+   
+  </div>
+
+  <div class="verbal">
+   
+  </div>
+    <div class="visual">
+     
+    </div>
+   
+   <button class="button">Continue</button>
+  </div>
+   
+ 
+</section>
+ 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Che Fernandez</a>.
+  </div>
+
+  <script>
+    fetch("data.json")
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      
+      const reactionEle = document.querySelector('.reaction');
+      
+      if(reactionEle){
+        const reactionData = data.find(item => item.category === 'Reaction');
+         if(reactionData){
+          reactionEle.innerHTML = `
+          <span > ${reactionData.category}</span>
+          ${reactionData.score}/ <span class="span1">100 </span>
+          <img src=" ${reactionData.icon}">
+          `;
+         }
+      }
+
+      const memoryEle = document.querySelector('.memory');
+      
+      if(memoryEle){
+        const memoryData = data.find(item => item.category === 'Memory');
+         if(memoryData){
+          memoryEle.innerHTML = `
+           <span class="spanMem">${memoryData.category}</span>
+           ${memoryData.score}/<span class="spanMem1">100</span>
+          <img src=" ${memoryData.icon}">
+          `;
+         }
+      }
+
+      const verbalEle = document.querySelector('.verbal');
+      
+      if(verbalEle){
+        const verbalData = data.find(item => item.category === 'Verbal');
+         if(verbalData){
+          verbalEle.innerHTML = `
+           <span class="spanV">${verbalData.category}</span>
+           ${verbalData.score}/<span class ="spanV1">100</span>
+          <img src=" ${verbalData.icon}">
+          `;
+         }
+      }
+
+      const visualEle = document.querySelector('.visual');
+
+      if(visualEle){
+        const visualData = data.find(item => item.category ==='Visual')
+        if(visualData){
+          visualEle.innerHTML = `
+          <span class="spanVi">${visualData.category}</span>
+          ${visualData.score}/<span class="spanVi1">100</span>
+          <img src = ${visualData.icon}>
+          `
+        }
+      }
+        
+      });
+
+    const button = document.querySelector(".button");
+    
+    function redirect(){
+      window.open("https://youtu.be/xvFZjo5PgG0?si=NNvsnJJNZEXcfhYs","_blank");
+
+     
+    }
+    button.addEventListener("click",()=>{
+      button.clicked = !button.clicked 
+      redirect();
+    });
+    
+  </script>
+</body>
+</html>

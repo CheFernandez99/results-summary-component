@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+}
+.left-card{
+    padding: 5%;
+    background:linear-gradient(hsl(252, 100%, 67%),hsl(242, 81%, 51%));
+    width:15%;
+    height: 400px;
+    border-radius: 5%;
+}
+.right-card{
+    background: rgb(255, 255, 255);
+    height: 400px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 25%;
+    border-radius: 0 5% 5% 0;
+    box-shadow: 5px 0px 5px rgba(139, 138, 138, 0.3);
+}
+#Sum{
+   margin: 10px;
+   padding: 10px;
+   font-size: larger;
+   font-weight: bold;
+}
+button{
+    padding: 5%;
+    margin: 10%;
+    width: 80%;
+    border-radius: 20%;
+    border: none;
+    background:  hsl(0, 0%, 15%);
+    font-size: larger;
+    color: white;
+}
+.bigNum{
+    background:linear-gradient(hsl(257, 72%, 60%),hsl(242, 83%, 35%));
+   padding: 10% 5%;
+   
+   align-items: center;
+   justify-content: center;
+   display: flex;
+    border-radius: 50%;
+    height: 40%;
+    width: 90% ;
+    font-size:400%;
+    
+}
+.smallNum{
+    font-size: small;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   margin-top: 5%;
+   position: absolute;
+   color: rgb(187, 187, 187);
+   
+}
+.reaction{
+    
+    background-color: hsla(0, 100%, 67%, 0.34);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding:10%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 10%;
+    width: 60% ;
+    border-radius: 10%;
+}
+span{
+    color: red;
+    padding: 5%;
+}
+.span1{
+    color: grey;
+}
+.memory{
+    background-color: hsla(38, 100%, 50%, 0.303);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding:10%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 10%;
+    width: 60% ;
+    border-radius: 10%;
+}
+.spanMem{
+    color: hsl(30, 100%, 50%);
+    padding: 5%;
+}
+.spanMem1{
+    color: grey;
+}
+.verbal{
+    background-color: hsla(165, 100%, 44%, 0.294);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding:10%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 10%;
+    width: 60% ;
+    border-radius: 10%;
+}
+.spanV{
+    color: hsl(163, 93%, 34%);
+    padding: 5%;
+}
+.spanV1{
+    color: grey;
+}
+.visual{
+    background-color: hsla(235, 87%, 49%, 0.286);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding:10%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 10%;
+    width: 60% ;
+    border-radius: 10%;
+}
+.spanVi{
+    color: hsl(236, 100%, 50%);
+    padding: 5%;
+}
+.spanVi1{
+    color: grey;
+}
+.G{
+align-items: center;
+justify-content: center;
+display: flex;
+padding-top: 10%;
+font-size:x-large;
+color: white;
+font-weight: bold;
+}
+#Res{
+align-items: center;
+display: flex;
+justify-content: center;
+padding-top: 10%;
+padding-bottom: 20%;
+font-size: large;
+color: rgb(224, 217, 217);
+font-weight: bold ;
+}
+.num{
+    color: white;
+}
+.YouScored{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgb(199, 199, 199);
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+        height: auto;
+        align-items: center; /* Center content horizontally */
+      }
+
+    
+      .left-card{
+        width:80%;
+        height: 100%;
+       margin-top: 10%;
+      }
+      .right-card{
+        width:90%;
+        height: 100%;
+        margin-bottom: 5%;
+        border-radius: 0 0 5% 5%;
+        box-shadow: 10px 10px 10px -5px #afadad, -10px 10px 10px -5px #888888, 0 10px 10px -5px #888888;
+      }
+      .reaction{
+        margin: 0 10% 5%;
+      }
+      .memory{
+        margin: 0 10% 5%;
+      }
+      .verbal{
+        margin: 0 10% 5%;
+      }
+      .visual{
+        margin: 0 10% 5%;
+      }
+      button{
+      margin: 0;
+      margin-left: 10%;
+      }
+      .bigNum{
+        width: 35% ;
+        height: 30% auto;
+        margin-left: 30%;
+      }
+      .smallNum{
+        margin-top:20%;
+      }
+     
+      .YouScored {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+       
+      }
+    
+     #Sum{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+     }
+}
